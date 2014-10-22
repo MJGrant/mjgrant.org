@@ -8,7 +8,7 @@ html {
 body {
   padding:0;
   margin:0 auto;
-  width:75%;
+  width:80%;
   max-width:100%;
   color:#505050 ;
 }
@@ -23,9 +23,11 @@ h1,h2,h3,h4 {
 }
 
 h2 {
+  font-weight:bold;
   font-size:1.3em;
   letter-spacing:3px;
   margin:1.5em 0 1.5em 0;
+  text-align:center;
 }
 
 h3 {
@@ -35,10 +37,6 @@ h3 {
 
 ul {
   line-height:1.6em;
-}
-
-li {
-  margin-bottom:2em;
 }
 
 a {
@@ -58,7 +56,6 @@ a:hover{
   padding:0;
   overflow:hidden;
   text-align:center;
-  border-bottom:6px double #aaa;
 }
 
 #name {
@@ -75,7 +72,7 @@ a:hover{
   overflow:hidden;
 }
 
-#contact ul li {
+#contact ul li, #return-to-top {
   text-transform:uppercase;
   letter-spacing:3px;
   list-style-type:none;
@@ -85,34 +82,24 @@ a:hover{
   text-align:center;
 }
 
-.projectBox {
-  width:340px;
-  height:200px;
-  background-color:#efefef;
-  margin:10px;
+#return-to-top {
+  display:block;
+  margin:40px auto;
 }
 
-.container {
-  margin-left: auto;
-  margin-right: auto;
+/* double line divider */
+.divider {
+  clear:both;
+  margin:0 auto;
+  display:block;
+  width:60%;
+  height:1px;
+  border-bottom:6px double #ddd;
 }
 
+/* Project gallery cells */
 .featured-work-wrapper {
   line-height:1.4em;
-}
-
-.centered-text {
-  text-align:center;
-}
-
-.resume-wrapper {
-  clear:both;
-  max-width:100%;
-}
-
-.dates, .acquired {
-  font-size:.9em;
-  color:#666;
 }
 
 .image {
@@ -149,10 +136,50 @@ a:hover{
   width:27%;
 }
 
+/* Technologies section */
+#technologies {
+  width:70%;
+  display:block;
+  margin:0 auto;
+  text-align:center;
+}
+
+#technologies ul li {
+  background-color:#eee;
+  margin:10px;
+  padding:10px;
+  display:inline-block;
+}
+
+#technologies ul li:first-child {
+  margin-left:-1em;
+}
+
+/* Work experience (resume) section */
+#container-workhistory h3 {
+  font-weight:bold;
+}
+
+.resume-wrapper {
+  clear:both;
+  max-width:100%;
+}
+
+.dates, .acquired {
+  font-size:1em;
+  color:#666;
+  font-style:italic;
+}
+
 /* Media queries for mobile */
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .project-cell {
     width:90%;
     max-width:90%;
   }
+
+  #technologies {
+    width:100%;
+  }
+}
